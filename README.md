@@ -11,7 +11,7 @@ Goto-Remote is a simple bash script that can open the remote repo of your CWD's 
 1. Place the script in one of your `PATH`s.
 2. That's it! (Try typing `gtr` inside a git directory)
 
-> !NOTE
+> [!NOTE]
 > This script is made for linux. Just change the last line's `xdg-Open` to `open`.
 
 #### For maximum productivity
