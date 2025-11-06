@@ -12,7 +12,7 @@ Goto-Remote is a simple bash script that can open the remote repo of your CWD's 
 2. That's it! (Try typing `gtr` inside a git directory)
 
 > [!NOTE]
-> This script is made for linux. Just change the last line's `xdg-Open` to `open`.
+> This script is made for GNU/Linux. MacOS peeps just change the last line's `xdg-Open` to `open`.
 
 #### For maximum productivity
 1. Map a keybind in your shell configuration file:
@@ -23,11 +23,9 @@ Example for zsh:
 bindkey -s '^g' 'gtr\n'
 ```
 
-2. Add custom command to neovim: 
-
-Example for neovim:
+2. Make it even invokable through neovim: 
 ```lua
--- Create a func for gtr
+-- Create a function for gtr
 vim.api.nvim_create_user_command("Gtr", function()
 	vim.fn.jobstart({ "bash", "-c", "gtr" }, { detach = true })
 	vim.api.nvim_echo({ { "remote opened in the default browser!", "Normal" } }, false, {})
@@ -41,3 +39,6 @@ vim.keymap.set("n", "<C-g>", ":Gtr<CR>", { noremap = true, silent = true })
  - [ ] Add support for multiple remotes.
  - [ ] Add an install script.
  - [ ] Switch to bubble tea for better UX.
+
+#### LICENSE
+see [LICENSE](LICENSE).
